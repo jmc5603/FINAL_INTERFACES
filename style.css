@@ -46,6 +46,8 @@ header img {
     align-items: center;
 }
 .mainSlider {
+    cursor: pointer;
+    transition: .5s;
     height: 100%;
     width: 100px;
     position: absolute;
@@ -53,6 +55,11 @@ header img {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+.mainSlider:hover {
+    z-index: 100;
+    transition: .5s;
+    scale: 1.3;
 }
 .mainSlider h1 {
     text-align: center;
