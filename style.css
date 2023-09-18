@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
+
+body {
+    background-color: #F6F1E9;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #4F200D;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header p {
+    font-family: 'Tourney', cursive;
+    font-size: 50px;
+    color: #FFD93D;
+    margin: 0;
+    margin-right: 20px;
+}
+header img {
+    height: 5vh;
+    width: 6vh;
+    margin-left: 20px;
+}
+
+#slider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 600px;
+    border-bottom: 50px solid #4F200D;
+    
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#slider div {
+    position: absolute;
+    box-sizing: border-box
+}
+#slider div img {
+    align-self: center;
+    width: 100%;
+}
+#lettuce_ring {
+    width: 90%
+}
+#tomato_ring {
+    width: 130%;
+}
+#burger{
+    width: 450px;
+}
+
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+
+#tomato_ring,#burger_ring,#lettuce_ring{
+    -webkit-animation: 40s rotate linear infinite;
+    animation: 40s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+#lettuce_ring {
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+#slider .sliderText {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.sliderText .neonText {
+    font-size: 100px;
+}
+.neonText {
+    font-family: 'Tourney', cursive;
+    text-transform: uppercase;
+    color: #FFD93D;
+    text-shadow: 0 0 3px #FF8400, 0 0 10px #FF8400, 0 0 10px #FF8400, 0 0 10px #FF8400;
+}
+#category_bar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 400px;
+
+    display: flex;
+    flex-direction: row;
+}
+.category_cell {
+    background-color: #4F200D;
+    border: 1px solid #FFD93D;
+    border-top: none;
+    box-shadow: inset 0px -20px 50px 20px #FFD93D;
+    width: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#category_bar > .category_cell:hover {
+    border: 1px solid #FF8400;
+    box-shadow: inset 0px -20px 50px 20px #FF8400;
+    z-index: 100;
+    transition: .5s;
+    scale: 1.05;
+}
+.category_cell img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.category_cell h1 {
+    font-size: 40px;
+    position: absolute;
+}
+.section_title {
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Telex', sans-serif;
+}
+#product_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#product_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    justify-content: space-evenly;
+}
+.product_cell {
+    min-width: 200px;
+    min-height: 200px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+    border: 2px solid #4F200D;
+}
+.product_cell p {
+    font-family: 'Telex', sans-serif;
+    font-size: 25px;
+    margin: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #4F200D;
+}
+.product_cell .price {
+    color: #FF8400;
+    font-size: 20px;
+}
+.product_cell:hover {
+    border: 2px solid #FF8400;
+    box-shadow: inset 0px 0px 50px 10px #FF8400;
+    z-index: 100;
+    transition: .5s;
+    scale: 1.05;
+}
+
+#circular_gallery {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#circular_gallery #button_panel h1 {
+    margin: 0;
+    margin-top: 20px;
+}
+#button_panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#circle_menu {
+    background-color: rgba(79, 32, 13, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin-top: 10px;
+    bottom: -15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+
+}
+.circle_item img {
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+.circle_item{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.mainCircle {
+    height: 325px;
+    width: 325px;
+}
+#item2 {
+    left: 80%;
+    background-color: #4F200D;
+}
+#item3 {
+    top: 80%;
+    background-color: #FF8400;
+}
+#item4 {
+    right: 80%;
+    background-color: #FFD93D;
+}
+#item1 {
+    bottom: 80%;
+}
+.circular_price {
+    z-index: 100;
+    width: 100%;
+    font-size: 70px;
+    top: 55%;
+    position: absolute;
+    text-align: center;
+    transition: .5s;
+}
+#left_button, #right_button {
+    cursor: pointer;
+    width: 30%;
+    color: #FF8400;
+    font-size: 75px;
+    transition: .5s;
+}
+#left_button:hover, #right_button:hover {
+    text-shadow: 0px 0px 20px #FF8400;
+    transition: .5s;
+    scale: 1.2;
+}
+
+footer {
+    background-color: #4F200D;
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: row;
+}
+footer>div {
+    border-right: 2px dashed #FFD93D;
+    width: 33%;
+}
+.footerh1 {
+    font-family: 'Tourney', cursive;
+    color: #FFD93D;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-left: 20px;
+}
+.socialMedia div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.footerp{
+    font-family: 'Telex', sans-serif;
+    margin: 0;
+    margin-left: 20px;
+    color: #FFD93D;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.socialMedia div img {
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+}
+.apps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+.apps h1, .apps p {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+}
+.apps img {
+    width: 200px;
+    height: auto;
+}
